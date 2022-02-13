@@ -1,0 +1,82 @@
+1.
+
+a<-c(3,5,7,8,9)
+b<-c(4,9,6,2,7)
+c<-c(7,1,6,8,9)
+m<-cbind(a,b,c)
+
+print("the resulting matrix is:")
+print(m)
+
+plot(a, b, c, type=“o”)
+
+2.
+
+Employees = data.frame(Name=c("Omar N.","Andy G.","Miranda H.", "Georgina S.","Paul H."),
+            Age=c(30,34,43,24,29),
+            Role=c("Clerk","Manager","Exective","CEO","ASSISTANT"),
+            Length_of_Service=c(5,10,13,2,4),
+            Payroll_No=c("12332346","12348779","12355633","12356987","679435576")
+            )
+print("Details of five very important employees:")                      
+print(Employees)
+
+
+3.
+
+
+
+
+
+
+
+4.
+
+Marks = c(30, 90, 45, 63, 81)
+barplot(Marks,
+main = "This is a simple bar plot of 5 subjects marks",
+xlab = "Marks",
+ylab = "Subject",
+names.arg = c("Math.","English", "Science", "Social Studies.", " Physical Education"),
+col = "blue",
+horiz = FALSE)
+
+5.
+
+name = readline(prompt="Yow, what's your name? ")
+age =  readline(prompt="What about your age? ")
+print(paste("My name is",name, "and I am",age ,"years old. Yeaaay, am getting old!!"))
+
+6.
+ 
+print("Sequence of numbers from 20 to 50:")
+print(seq(20,50))
+print("Mean of numbers from 20 to 50:")
+print(mean(20:50))
+print("Sum of numbers from 20 to 50:")
+print(sum(20:50))
+
+7.
+
+vector = sample(-50:50, 10, replace=TRUE)
+print("These are 10 random integers  between -50 and +50:")
+print(vector)
+
+Optional tasks
+
+1.
+
+Fibonacci <- numeric(10)
+Fibonacci[1] <- Fibonacci[2] <- 1
+for (i in 3:10) Fibonacci[i] <- Fibonacci[i - 2] + Fibonacci[i - 1]
+print("The first 10 Fibonacci numbers are:")
+print(Fibonacci)
+
+2. 
+
+for (n in 1:100) {
+ if (n %% 3 == 0 & n %% 5 == 0) {print("FizzBuzz")}
+ else if (n %% 3 == 0) {print("Fizz")}
+ else if (n %% 5 == 0) {print("Buzz")}
+ else print(n)
+}
