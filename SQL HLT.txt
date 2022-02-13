@@ -1,0 +1,25 @@
+ import altair as alt
+>>> import pandas as pd
+>>> data = pd.DataFrame({'col-1': list('CCCDDDEEE'),
+...                      'col-2': [2, 7, 4, 1, 2, 6, 8, 4, 7]
+...                      })
+>>> chart = alt.chart(data)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'altair' has no attribute 'chart'
+>>> alt.chart(data).mark_point().encode(x='col-1', y-'col-2')
+  File "<stdin>", line 1
+    alt.chart(data).mark_point().encode(x='col-1', y-'col-2')
+
+create database ClubMembers;
+create table Contribution(
+  Members varchar (20) not null,
+  Id_No int not null ,
+  Tel_No int not null,
+  Contribution int not null,
+  primary key (Id_No),
+  unique (Tel_No)
+);
+  show databases;
+  use ClubMembers;
+  explain Contribution;
