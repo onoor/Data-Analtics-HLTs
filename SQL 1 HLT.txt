@@ -1,0 +1,16 @@
+
+CREATE DATABASE ClubMembers;
+
+USE ClubMembers,
+
+CREATE TABLE Contribution(
+  Members varchar (20) not null,
+  Id_No int not null ,
+  Tel_No int not null,
+  Contribution int not null,
+  primary key (Id_No),
+  unique (Tel_No)
+);
+
+ 
+EXPLAIN Contribution;
