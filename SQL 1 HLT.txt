@@ -1,16 +1,28 @@
 
-CREATE DATABASE ClubMembers;
+CREATE DATABASE Boat_Rentals;
 
-USE ClubMembers,
+USE Boat_Rentals;
 
-CREATE TABLE Contribution(
-  Members varchar (20) not null,
-  Id_No int not null ,
-  Tel_No int not null,
-  Contribution int not null,
-  primary key (Id_No),
-  unique (Tel_No)
+CREATE TABLE rentors(
+CustomerID INT NOT NULL PRIMARY KEY, 
+CustomerName VARCHAR(100),
+DateofBirth VARCHAR(10),
+Address VARCHAR(100),
+PostCode VARCHAR(7),
+ContactNumber INT(11),	
+EmailAddress VARCHAR(30)
+
 );
 
- 
-EXPLAIN Contribution;
+EXPLAIN rentors;
+
+INSERT INTO rentors (CustomerID, CustomerName, DateofBirth, Address, PostCode, ContactNumber, EmailAddress)
+VALUES
+(29647549, "Talib Osman", "11/08/1994", "32 Crosshill street", "m146jl", "07749898035", "talib3478@gmail.com"),
+(28983456, "Dotto Kurwa", "21/03/1986", "48 Croydon road", "e126pl", "07949893241", "d.kurwa128@hotmail.com"),
+(32234561, "Dexter Morgan", "15/05/1979", "9 abbeyhill avenue", "c16rd", "07649899803", "Dexter.Morgan8@nypd.com"),
+(29768452, "Kylie Duncan", "16/01/1985", "12 claremont street", "fy26ps", "07749648028", "swtkylie038@gmail.com"),
+(32567894, "Amy Schumer", "27/12/1991", "98 london street", "n256nl", "07749898035", "a.schumer@live.com")
+;
+
+SELECT * FROM rentors;
